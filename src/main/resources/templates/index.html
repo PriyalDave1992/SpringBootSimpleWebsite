@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head><title>My CourseWare App</title></head>
+<body>
+
+<h1>Welcome to my CourseWare App</h1>
+<div th:each="course : ${allCourses}">
+
+<h2 th:text="${course.name}"></h2>
+	<div th:each="lesson : ${course.lessons}">
+		<div th:text="${lesson.name}"></div>
+	</div>
+
+</div>
+
+</body>
+</html>
